@@ -3,7 +3,7 @@ import axios from "axios";
 import download from "downloadjs"; 
 import "../stylesheets/download.css";
 
-const baseURL = "http://100.25.31.95:6000";
+const baseURL = process.env.REACT_APP_BASEURL;
 let frontURL = "";
 const Download = (props) => {
     useEffect(() => {
