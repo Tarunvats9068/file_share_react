@@ -5,7 +5,7 @@ import download from "downloadjs";
 import logo from "../stylesheets/logo.png";
 import "../stylesheets/home.css";
 
-const baseURL = "http://100.25.31.95:6000";
+const baseURL = process.env.REACT_APP_BASEURL;
 let frontURL = "";
 const Home = () => {
     const dropRef = useRef(null);
