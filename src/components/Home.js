@@ -6,7 +6,7 @@ import logo from "../stylesheets/logo.png";
 import "../stylesheets/home.css";
 
 const baseURL = process.env.REACT_APP_BASEURL;
-let frontURL = "";
+let frontURL = "https://easysharing.netlify.app";
 const Home = () => {
     const dropRef = useRef(null);
     const submitBtn = useRef(null); 
@@ -106,7 +106,7 @@ const Home = () => {
             shareBtnRef.current.style.color = "";
         }, 200);
         navigator.clipboard.writeText(
-            `${frontURL || baseURL}/api/${uploadedFile.file._id}`
+            `${frontURL}/download/${uploadedFile.file._id}`
         );
         const toolTip = document.querySelector(
             "button.share-link .tooltiptext"
