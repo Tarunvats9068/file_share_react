@@ -9,7 +9,7 @@ const Download = (props) => {
     useEffect(() => {
         const id = props.match.params.id;
         axios
-            .get(`${baseURL}/api/file/${id}`)
+            .get(`${baseURL}/api/${id}`)
             .then((file) => {
                 const downloadFile = file.data;
                 download(
