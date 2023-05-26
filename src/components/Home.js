@@ -106,7 +106,7 @@ const Home = () => {
             shareBtnRef.current.style.color = "";
         }, 200);
         navigator.clipboard.writeText(
-            `${frontURL || baseURL}/download/${uploadedFile.file._id}`
+            `${frontURL || baseURL}/api/${uploadedFile.file._id}`
         );
         const toolTip = document.querySelector(
             "button.share-link .tooltiptext"
